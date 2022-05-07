@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trial Booking</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+        
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+            height: 50px;
+        }
+        
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+        
+        #navbar ul li a {
+            color: white;
+            display: block;
+            padding: 3px 22px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+        
+        #navbar ul li a:hover {
+            color: rgb(245, 12, 12);
+            background-color: white;
+        }
+        
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+        
+        html {
+            font-size: 62.5%;
+        }
+        
+        body {
+            box-sizing: border-box;
+        }
+        
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .section booking {
+            height: 100vh;
+            background-image: linear-gradient(to right bottom, #66a5ad, #c4dfe6);
+        }
+        
+        .book {
+            width: 60%;
+            height: 60%;
+            background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("5.jpg");
+            background-size: 100%;
+            background-position: right;
+            border-radius: 3px;
+            box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+        }
+        
+        .form {
+            width: 50%;
+            padding: 6rem;
+        }
+        
+        .head {
+            font-size: 4rem;
+            margin-bottom: 3rem;
+            color: #07575b;
+        }
+        
+        .form-group {
+            margin-bottom: 2rem;
+        }
+        
+        .form-group:nth-child(3) {
+            margin-bottom: 5rem;
+        }
+        
+        .input {
+            font-size: 1. 5rem;
+            font-family: inherit;
+            padding: 1.5rem 2rem;
+            border-radius: 2px;
+            background-color: rgba(196, 223, 230, 0.4);
+            border: none;
+            border-bottom: 3px solid transparent;
+            width: 90%;
+            display: block;
+            transition: all 0.3s;
+        }
+        
+        .input:focus {
+            outline: none;
+            box-shadow: 0 1rem 2 rem rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid #07575b;
+            background-color: rgba(196, 223, 230);
+            ;
+        }
+        
+        .input:focus:invalid {
+            border-bottom: 3px solid red;
+        }
+        
+        .input:focus::-webkit-input-placeholder {
+            color: grey;
+        }
+        
+        .form-label {
+            font-size: 1.4 rem;
+            font-weight: 700;
+            margin-left: 2rem;
+            margin-top: 0.7rem;
+            display: block;
+            transition: all 0.3s;
+        }
+        
+        .form-radio:placeholder-shown+.form-label {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-4rem);
+        }
+        
+        .form-radio {
+            width: 25%;
+            display: inline-block;
+        }
+        
+        .btn,
+        .btn:link,
+        .btn:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 1.5rem 4rem;
+            display: inline-block;
+            border-radius: 10rem;
+            transition: all 0.2s;
+            position: relative;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            margin-top: 4rem;
+            background-color: #07575b;
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn:active,
+        .btn:focus {
+            outline: none;
+            transform: translateY(-1px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        }
+        
+        .form-rbtn {
+            font-size: 20px;
+        }
+        
+        .button {
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: #646464;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <li class="item"><a href="kb.html"><button class="button"><i class="fa fa-home"></i></button> Back To Home</a></li>
+        </ul>
+    </nav>
+    <section class="Booking">
+        <div class="book">
+            <div class="form">
+                <form action="#" class="form1">
+                    <h2 class="head">
+                        Start Booking
+                    </h2>
+                    <div class="form-group">
+                        <input type="text" class="input" placeholder="Full Name" id="name" required>
+                        <label for="name" class="form-label">Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="input" placeholder="Eamil Address" id="Email" required>
+                        <label for="email" class="form-label">Eamil Address</label>
+                    </div>
+
+                    <button class="btn">Book Trial</button>
+            </div>
+            </form>
+        </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
