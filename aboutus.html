@@ -33,6 +33,7 @@
             text-transform: uppercase;
             font-size: 30px;
             color: #40c9a2;
+            margin-top: 75px;
         }
         
         .info .title::after {
@@ -102,17 +103,37 @@
         #navbar {
             display: flex;
             align-items: center;
-            position: sticky;
-            top: 0px;
-            height: 50px;
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 98px;
+            margin-bottom: 10px;
         }
         
-        .button {
-            border: none;
-            color: white;
-            cursor: pointer;
-            font-size: 16px;
-            background-color: grey;
+        #logo {
+            margin: 10px 34px;
+        }
+        
+        #logo img {
+            height: 59px;
+            margin: 3px 6px;
+        }
+        
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+        
+        #navbar ul {
+            display: flex;
+            font-family: 'Baloo Bhai', cursive;
         }
         
         #navbar ul li {
@@ -129,20 +150,21 @@
         }
         
         #navbar ul li a:hover {
-            color: rgb(245, 12, 12);
+            color: black;
             background-color: white;
         }
         
-        #navbar::before {
-            content: "";
-            background-color: black;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            height: 100%;
-            width: 100%;
-            z-index: -1;
-            opacity: 0.7;
+        footer {
+            background: black;
+            color: white;
+            padding: 9px 20px;
+            text-align: center;
+            margin-top: 100px;
+        }
+        
+        .icons {
+            margin-left: 525px;
+            color: rgb(254, 254, 254);
         }
     </style>
 </head>
@@ -150,9 +172,25 @@
 <body>
     <section>
         <nav id="navbar">
+            <div id="logo">
+                <img src="1.png" alt="TechHome">
+            </div>
+            <!-- <a href="#navbar"><button id="top">
+                <i class="material-icons">arrow_upward</i>
+            </button></a> -->
             <ul>
-                <li class="item"><a href="kb.html"><button class="button"><i class="fa fa-home"></i></button> Back To Home</a></li>
+                <li class="item"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                <li class="item"><a href="index.html"><i class="fa fa-bars"></i> Products</a></li>
+                <li class="item"><a href="aboutus.html">About</a></li>
+                <li class="item"><a href="booking.html">Book Trial</a></li>
+                <li class="item"><a href="contact-us.html">Contact-Us</a></li>
             </ul>
+            <div class="icons">
+                <a href="#"><i class="fa fa-facebook-f fa-2x"></i></a>
+                <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+                <a href="#"><i class="fa fa-youtube fa-2x"></i></a>
+            </div>
         </nav>
         <div class="container">
             <div class="info">
@@ -185,7 +223,11 @@
             </div>
 
         </div>
-
+        <footer>
+            <div class="center">
+                Copyright &copy; www.techsevi.com. All rights reserved!
+            </div>
+        </footer>
 
 </body>
 
